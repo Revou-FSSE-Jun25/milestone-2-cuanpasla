@@ -1,0 +1,91 @@
+body {
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+h1 {
+    color: #fff;
+}
+.game-board {
+    grid-template-columns: repeat(4, 100px);
+    justify-content: center;
+    margin-top: 20px;
+    grid-gap: 10px;
+    display: grid;
+}
+.card {
+    transition: transform 0.2s;
+    background-color: #fff;
+    justify-content: center;
+    border-radius: 10px;
+    transform: scale(1);
+    align-items: center;
+    cursor: pointer;
+    font-size: 2em;
+    display: flex;
+    height: 100px;
+    width: 100px;
+}
+.card.flipped {
+    background-color: #ffeb3b;
+    cursor: default;
+}
+.card.matched {
+    background-color: #4caf50;
+    cursor: default;
+    color: white;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Tombol kembali ke beranda */
+.back-btn{
+    transition: transform .15s ease, background .15s ease, opacity .2s ease;
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 1px solid rgba(255,255,255,.18);
+    box-shadow: 0 6px 18px rgba(0,0,0,.35);
+    cursor: pointer; user-select: none;
+    background: rgba(15,23,42,.85);
+    backdrop-filter: blur(6px);
+    font: 600 14px/1 Arial;
+    top: 16px; left: 16px;
+    border-radius: 999px;
+    padding: 10px 12px;
+    color: #e5e7eb;
+    position: fixed;
+    z-index: 9999;
+}
+
+.back-btn:hover { 
+    background: rgba(15,23,42,.95); 
+    transform: translateY(-1px); 
+}
+
+.back-btn:active { 
+    transform: translateY(0); 
+}
+
+.back-btn:focus-visible{
+    outline: 2px solid #3b82f6; 
+    outline-offset: 2px;
+}
+
+@media (max-width: 480px){
+    .back-btn{ 
+        padding: 9px 11px; 
+        left: 12px; 
+        top: 12px; 
+    }
+
+    .back-btn span{ 
+        display: none; 
+    }
+}
+
+@media (prefers-reduced-motion: reduce){
+    .back-btn{ 
+        transition: none; 
+    }
+}

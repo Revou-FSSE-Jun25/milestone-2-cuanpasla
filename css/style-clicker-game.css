@@ -1,0 +1,85 @@
+body {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    color: #fff;
+}
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+#score {
+    margin-bottom: 30px;
+    font-size: 1.8em;
+}
+button {
+    background-color: #ff7e5f;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: 0.2s;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #fff;
+    margin: 10px;
+    border: none;
+}
+button:hover {
+    background-color: #feb47b;
+}
+.upgrade {
+    background-color: #6a11cb;
+}
+.upgrade:hover {
+    background-color: #2575fc;
+}
+
+/* Tombol kembali ke beranda */
+.back-btn{
+    transition: transform .15s ease, background .15s ease, opacity .2s ease;
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 1px solid rgba(255,255,255,.18);
+    box-shadow: 0 6px 18px rgba(0,0,0,.35);
+    cursor: pointer; user-select: none;
+    background: rgba(15,23,42,.85);
+    backdrop-filter: blur(6px);
+    font: 600 14px/1 Arial;
+    top: 16px; left: 16px;
+    border-radius: 999px;
+    padding: 10px 12px;
+    color: #e5e7eb;
+    position: fixed;
+    z-index: 9999;
+}
+
+.back-btn:hover { 
+    background: rgba(15,23,42,.95); 
+    transform: translateY(-1px); 
+}
+
+.back-btn:active { 
+    transform: translateY(0); 
+}
+
+.back-btn:focus-visible{
+    outline: 2px solid #3b82f6; 
+    outline-offset: 2px;
+}
+
+@media (max-width: 480px){
+    .back-btn{ 
+        padding: 9px 11px; 
+        left: 12px; 
+        top: 12px; 
+    }
+
+    .back-btn span{ 
+        display: none; 
+    }
+}
+
+@media (prefers-reduced-motion: reduce){
+    .back-btn{ 
+        transition: none; 
+    }
+}
